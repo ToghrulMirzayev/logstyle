@@ -37,6 +37,12 @@ class CustomLog:
         self.logger.info(color + "+" + "-" * box_width + "+")
 
     def title_log(self, title: str, message: str, color=COLOR_GREEN):
+        """
+        Method for title style log
+        :param title: log's title
+        :param message: message that should be logged
+        :param color: selected color
+        """
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
         title = f'====== {title}  ======'
         title_timestamp = f'=== {timestamp}  ==='
