@@ -18,6 +18,11 @@ class CustomLog:
         self.logger.setLevel(logging.INFO)
 
     def box_log(self, message: str, color=COLOR_GREEN):
+        """
+        Method for box style log
+        :param message: message that should be logged
+        :param color: selected color
+        """
         box_width = len(message) + 2
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
         box_formatter = logging.Formatter(f'{color} | %(message)s |')
