@@ -60,6 +60,13 @@ class CustomLog:
         self.logger.info(color + message_line)
 
     def json_log(self, title, message: str, data: dict, color=COLOR_GREEN):
+        """
+        Method for JSON style log
+        :param title: log's title
+        :param message: message that should be logged
+        :param data: data that should be presented in JSON format
+        :param color: selected color
+        """
         json_formatter = logging.Formatter(f'{color}  %(message)s ')
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
         self.handler.setLevel(logging.INFO)
@@ -78,6 +85,13 @@ class CustomLog:
         self.logger.removeHandler(self.handler)
 
     def yaml_log(self, title, message: str, data: dict, color=COLOR_GREEN):
+        """
+        Method for YAML style log
+        :param title: log's title
+        :param message: message that should be logged
+        :param data: data that should be presented in YAML format
+        :param color: selected color
+        """
         yml_formatter = logging.Formatter(f'{color}  %(message)s ')
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
         self.handler.setLevel(logging.INFO)
