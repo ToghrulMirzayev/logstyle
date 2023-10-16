@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='logstyle',
-    version='1.0.1',
+    version='1.0.2',
     author='Toghrul Mirzayev',
     author_email='togrul.mirzoev@gmail.com',
     description='Logstyle is simply lightweight, colorful and customizable logging library',
